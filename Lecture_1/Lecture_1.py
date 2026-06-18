@@ -9,7 +9,7 @@ age = 21          # Integer
 height = 5.5      # Float
 hobby = "coding"  # String
 alive = True      # Boolean
-empty = None          # None
+empty = None      # None
     
 # Displaying Variables
 print("\nIntroduction:")
