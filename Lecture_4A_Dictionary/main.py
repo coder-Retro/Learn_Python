@@ -78,7 +78,7 @@ print(dummy_keys)
 dummy_values = dummy.values()
 print(dummy_values)
 
-# Print key:value pairs
+# Print key:value pairs as a List
 pairs = list(dummy.items())
 print(pairs)
 
