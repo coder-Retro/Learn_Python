@@ -1,7 +1,7 @@
 '''
 Lecture: 4
 
-Topic: Dictionary & Set
+Topic: Dictionary
 '''
 
 # Dictionary Section
@@ -22,19 +22,13 @@ are immutable.
 # Dictionary Declaration
 dummy = {}
 
-# Python Inputs
+# Key:Value insertion in Dictionary
 name_key = input("Enter key for name: ")
-name_value = input("Enter value for name: ")
+dummy[name_key] = input("Enter value for name: ")
 
 # Key:Value insertion in Dictionary
-dummy[name_key] = name_value
-
-# Python Inputs
 age_key = input("Enter key for age: ")
-age_value = input("Enter value for age: ")
-
-# Key:Value insertion in Dictionary
-dummy[age_key] = age_value
+dummy[age_key] = input("Enter value for age: ")
 
 # Print number of keys in Dictionary
 print(len(dummy))
@@ -65,10 +59,12 @@ It returns all keys in that Dictioary
 It returns all values in that Dictioary
 
 3. dict_name.items()
-It returns all key:value pairs as tuples
+It returns all key:value pairs as tuples. You can do indexing in
+the returned tuples if you type cast the retuned tuples to list/tuple.
 
 4. dict_name.get("key")
 It returns the value of passed key. Similar to dict_name["key"]
+but wont crash if key isn't found so safer than dict_name["key"]
 
 5. dict_name.update(new_dict)
 It inserts the passed items in the Dictionary
@@ -83,8 +79,12 @@ dummy_values = dummy.values()
 print(dummy_values)
 
 # Print key:value pairs
-pairs = dummy.items()
+pairs = list(dummy.items())
 print(pairs)
+
+# Print specific tuple from the returned tuples using index.
+index_val = pairs[0]
+print(index_val)
 
 # Print value using dict_name.get("key")
 dummy_name = dummy.get(name_key)
@@ -143,6 +143,10 @@ print(parent_keys)
 parent_values = parent_dict.values()
 print(parent_values)
 
+# Print all key:value pairs of Parent Dictionary
+parent_pairs = parent_dict.items()
+print(parent_pairs)
+
 # Print all keys of Child Dictionary
 child1_keys = parent_dict["child1_dict"].keys()
 print(child1_keys)
@@ -154,3 +158,9 @@ child1_values = parent_dict["child1_dict"].values()
 print(child1_values)
 child2_values = parent_dict["child2_dict"].values()
 print(child2_values)
+
+# Print all key:value pairs of Child Dictioary
+child1_pairs = parent_dict["child1_dict"].items()
+print(child1_pairs)
+child2_pairs = parent_dict["child2_dict"].items()
+print(child2_pairs)
