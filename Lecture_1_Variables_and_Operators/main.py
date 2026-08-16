@@ -1,4 +1,8 @@
-# Python Basics:
+'''
+Lecture: 1
+
+Topic: Variables And Operators
+'''
 
 # Displaying Output:
 print("Displaying Kaido");

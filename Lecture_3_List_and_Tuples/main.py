@@ -1,4 +1,9 @@
-# Lists
+'''
+Lecture: 3
+
+Topic: List And Tuples
+'''
+
 print("Lists:")
 """
 A list is a special array that can store elements

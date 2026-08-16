@@ -1,4 +1,9 @@
-# Strings
+'''
+Lecture: 2
+
+Topic: String
+'''
+
 print("Strings:")
 """
 Strings is a datatype which store multiple
