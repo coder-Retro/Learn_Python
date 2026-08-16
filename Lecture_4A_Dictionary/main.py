@@ -83,8 +83,8 @@ dummy_values = dummy.values()
 print(dummy_values)
 
 # Print key:value pairs
-dummy_items = dummy.items()
-print(dummy_items)
+pairs = dummy.items()
+print(pairs)
 
 # Print value using dict_name.get("key")
 dummy_name = dummy.get(name_key)
