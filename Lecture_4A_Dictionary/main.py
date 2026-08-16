@@ -92,6 +92,16 @@ print(dummy_name)
 dummy_age = dummy.get(age_key)
 print(dummy_age)
 
+# Add More key:value pair using dict_name.update({pairs})
+new_pairs = {}
+gender_key = input("Enter key for gender: ")
+new_pairs[gender_key] = input("Enter value for gender: ")
+isAdult_key = input("Enter key for isAdult: ")
+new_pairs[isAdult_key] = input("Enter value for isAdult: ")
+dummy.update(new_pairs)
+print(dummy)
+# old key:value pairs can be updated as well by using existing keys
+
 # Nested Dictoinary Section
 print("Topic: Nested Dictioary")
 
