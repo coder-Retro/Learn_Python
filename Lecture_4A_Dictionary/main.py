@@ -36,6 +36,9 @@ age_value = input("Enter value for age: ")
 # Key:Value insertion in Dictionary
 dummy[age_key] = age_value
 
+# Print number of keys in Dictionary
+print(len(dummy))
+
 # Print entire Dictionary
 print(dummy)
 
@@ -43,14 +46,51 @@ print(dummy)
 print(type(dummy))
 
 # Print value of a specifice key
-print(dummy[name_key])
-print(dummy[age_key]) 
+name = dummy[name_key]
+print(name)
+age = dummy[age_key]
+print(age) 
 
-# Print all keys as a List
-print(list(dummy.keys()))
+# Basic Dicionary Methods Section
+print("Basic Dictionary Methods:")
 
-# Print all values as a List
-print(list(dummy.values()))
+'''
+Basic Dictionary Methods:
+Following are some basic methods used with Dictionary in python.
+
+1. dict_name.keys()
+It returns all keys in that Dictioary
+
+2. dict_name.values()
+It returns all values in that Dictioary
+
+3. dict_name.items()
+It returns all key:value pairs as tuples
+
+4. dict_name.get("key")
+It returns the value of passed key. Similar to dict_name["key"]
+
+5. dict_name.update(new_dict)
+It inserts the passed items in the Dictionary
+'''
+
+# Print all keys
+dummy_keys = dummy.keys()
+print(dummy_keys)
+
+# Print all values
+dummy_values = dummy.values()
+print(dummy_values)
+
+# Print key:value pairs
+dummy_items = dummy.items()
+print(dummy_items)
+
+# Print value using dict_name.get("key")
+dummy_name = dummy.get(name_key)
+print(dummy_name)
+dummy_age = dummy.get(age_key)
+print(dummy_age)
 
 # Nested Dictoinary Section
 print("Topic: Nested Dictioary")
@@ -69,29 +109,48 @@ parent_dict = {}
 parent_dict["child1_dict"] = { "ch1_name":"kaido", "ch1_age":80 }
 parent_dict["child2_dict"] = { "ch2_name":"luffy", "ch2_age":21 }
 
+# Print number of keys in Parent Dictionary
+print(len(parent_dict))
+
+# Print number of keys in Child Dictioary
+print(len(parent_dict["child1_dict"]))
+print(len(parent_dict["child2_dict"]))
+
 # Print Parent Dictionary:
 print(parent_dict)
 
 # Print values of specific keys of Parent Dictionary
-print(parent_dict["child1_dict"])
-print(parent_dict["child2_dict"])
+child1 = parent_dict["child1_dict"]
+print(child1)
+child2 = parent_dict["child2_dict"]
+print(child2)
 
 # Print values of specific keys of Child Dictionary
-print(parent_dict["child1_dict"]["ch1_name"])
-print(parent_dict["child1_dict"]["ch1_age"])
-print(parent_dict["child2_dict"]["ch2_name"])
-print(parent_dict["child2_dict"]["ch2_age"])
+child1_name = parent_dict["child1_dict"]["ch1_name"]
+print(child1_name)
+child1_age = parent_dict["child1_dict"]["ch1_age"]
+print(child1_age)
+child2_name = parent_dict["child2_dict"]["ch2_name"]
+print(child2_name)
+child2_age = parent_dict["child2_dict"]["ch2_age"]
+print(child2_age)
 
-# Print all keys of Parent Dictionary as a List
-print(list(parent_dict.keys()))
+# Print all keys of Parent Dictionary
+parent_keys = parent_dict.keys()
+print(parent_keys)
 
-# Print all values of Parent Dictionary as a List
-print(list(parent_dict.values()))
+# Print all values of Parent Dictionary
+parent_values = parent_dict.values()
+print(parent_values)
 
-# Print all keys of Child Dictionary as a List
-print(list(parent_dict["child1_dict"].keys()))
-print(list(parent_dict["child2_dict"].keys()))
+# Print all keys of Child Dictionary
+child1_keys = parent_dict["child1_dict"].keys()
+print(child1_keys)
+child2_keys = parent_dict["child2_dict"].keys()
+print(child2_keys)
 
-# Print all values of Child Dicionary as a List
-print(list(parent_dict["child1_dict"].values()))
-print(list(parent_dict["child2_dict"].values()))
+# Print all values of Child Dicionary
+child1_values = parent_dict["child1_dict"].values()
+print(child1_values)
+child2_values = parent_dict["child2_dict"].values()
+print(child2_values)
